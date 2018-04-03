@@ -1,24 +1,6 @@
-# README
+This the the code backing my blog.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby version: 2.5
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Travis CI Build Status:  
+[![Build Status](https://travis-ci.org/donnell74/blog.svg?branch=master)](https://travis-ci.org/donnell74/blog)
