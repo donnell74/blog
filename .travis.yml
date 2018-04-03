@@ -1,6 +1,11 @@
 language: ruby
 rvm:
   - 2.5
+  
+# This will fix an error in ruby 2.5, details:
+# https://github.com/travis-ci/travis-ci/issues/8978
+before_install:
+  - gem install bundler
 
 # The `script` option is an optional list of the main build task(s). `rake` is
 # the default script option for Travis and most Rails projects will want this
