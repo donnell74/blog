@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-	http_basic_authenticate_with name: "donnell74", password: "secret", only: :destroy
 	before_action :find_article
+	before_action :authenticate, except: ['create']
 
 	def create
 		@comment = @article.comments.create(comment_params)
@@ -19,5 +19,11 @@ class CommentsController < ApplicationController
 
 	private def comment_params
 		params.require(:comment).permit(:commenter, :body)
+	end
+
+	private def authenticate
+		if !logged_in?
+			redirect_to login_path
+		end
 	end
 end
