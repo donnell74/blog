@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-    before_action :find_article, only: ['show', 'edit', 'update', 'destroy']
-    before_action :authenticate, except: ['index', 'show']
+  before_action :find_article, only: ['show', 'edit', 'update', 'destroy']
+  before_action :authenticate, except: ['index', 'show']
 
 	def index
 		@articles = Article.all
@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
+		@article = Article.new(article_params)
 		if @article.save
 			redirect_to @article
 		else
