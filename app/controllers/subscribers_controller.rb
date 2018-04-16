@@ -6,6 +6,7 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
+      SubscriberMailer.with(subscriber: @subscriber).welcome_email.deliver_later
       redirect_to articles_path
     else
       render 'new'
