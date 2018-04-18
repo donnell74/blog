@@ -1,11 +1,15 @@
 <header>
-  <% if logged_in? %>
-    <%= link_to "Log out", logout_path, method: :delete %>
-  <% else %>
-    <%= link_to "Log in", login_path %>
-  <% end %>
+  <div class="jumbotron text-center">
+    <h1>Greg and the Holy Rails</h1>
   
-  <%= link_to "Blog", articles_path %>
-  <%= link_to "About Me", aboutme_path %>
-  <%= link_to "Subscribe", new_subscriber_path %>
+    <span class="col-sm-1">    
+      <%= link_to "Blog", articles_path %>
+    </span>
+    <span class="col-sm-1">
+      <%= link_to "About Me", aboutme_path %>
+    </span>
+    <span class="col-sm-1">
+      <%= link_to "Subscribe", new_subscriber_path %>
+    </span>
+  </div>
 </header>

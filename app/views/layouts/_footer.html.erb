@@ -1,7 +1,20 @@
 <footer>
-  <p>Copyright 2018</p>
-  <p>
-    Contact information: 
-    <a href="mailto:gregandtheholyrails@gmail.com">gregandtheholyrails@gmail.com</a>.
-  </p>
+  <div class="container-fluid row text-center">
+    <div class="col-md-4">
+      <p>Copyright 2018</p>
+    </div>
+    <div class="col-md-4">
+      <p>
+        Contact information: 
+        <a href="mailto:gregandtheholyrails@gmail.com">gregandtheholyrails@gmail.com</a>.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <% if logged_in? %>
+        <%= link_to "Log out", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log in", login_path %>
+      <% end %>
+    </div>
+  </div>
 </footer>
