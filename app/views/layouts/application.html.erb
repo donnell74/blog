@@ -8,16 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <header>
-    <% if logged_in? %>
-      <%= link_to "Log out", logout_path, method: :delete %>
-    <% else %>
-      <%= link_to "Log in", login_path %>
-    <% end %>
-    
-    <%= link_to "Subscribe", new_subscriber_path %>
-  </header>
+  <%= render 'layouts/header' %>
+
   <body>
     <%= yield %>
   </body>
+
+  <%= render 'layouts/footer' %>
 </html>
