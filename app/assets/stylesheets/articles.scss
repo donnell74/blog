@@ -1,3 +1,19 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.article-card {
+  border-color: #1f386b;
+  border-width: thin;
+  margin-bottom: 18px;
+  padding: 6px;
+  background-color: #f9fafc;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.article-card-container {
+  padding: 18px;
+}
+
+.article-card .card-title {
+  font-size: 24px;
+}
