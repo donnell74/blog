@@ -1,15 +1,13 @@
 <header>
-  <div class="container-fluid text-center">
-    <h1>Greg and the Holy Rails</h1>
-  
-    <span class="col-sm-1">    
-      <%= link_to "Blog", articles_path %>
-    </span>
-    <span class="col-sm-1">
-      <%= link_to "About Me", aboutme_path %>
-    </span>
-    <span class="col-sm-1">
-      <%= link_to "Subscribe", new_subscriber_path %>
-    </span>
+  <div class="container-fluid row">
+    <div class="col-lg-9">
+      <h1>Greg and the Holy Rails</h1>
+    </div>
+    
+    <div class="col-md-3 links">
+      <span class="col-md-1"><%= link_to "Blog", articles_path %></span>
+      <span class="col-md-1"><%= link_to "About Me", aboutme_path %></span>
+      <span class="col-md-1"><%= link_to "Subscribe", new_subscriber_path %></span>
+    </div>
   </div>
 </header>

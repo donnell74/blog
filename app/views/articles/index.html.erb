@@ -8,6 +8,8 @@
 			<strong class="card-title"><%= article.title %></strong>
 			<span class="card-text">
 				<%= truncate(article.text, :length => 1000) %>
+			</span>
+			<span class="read-more">
 				<%= link_to 'Read more', article_path(article) %>
 			</span>
 			<% if logged_in? %>
